@@ -2,7 +2,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import debug_google from './debug_google';
+import {debug_google, push_debug_google_config} from './debug_google';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -29,8 +29,12 @@ export function activate(context: vscode.ExtensionContext) {
     let debug_Google = vscode.commands.registerCommand('extension.chrome_debug_to_google', () => {
         debug_google();
     });
-
     context.subscriptions.push(debug_Google);
+
+    let push_debug_Google = vscode.commands.registerCommand('extension.push_chrome_debug_config', () => {
+        push_debug_google_config();
+    });
+    context.subscriptions.push(push_debug_Google);
 }
 
 // this method is called when your extension is deactivated
