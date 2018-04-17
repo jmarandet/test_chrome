@@ -5,7 +5,7 @@ https://github.com/Microsoft/vscode-chrome-debug/issues/647
 
 Simply activate the plugin with `F1` and `Hello World`
 
-Then open a project and add the following Launch.json setting :
+Then open a project and add the following Launch.json setting - or type `F1` and  `Add chrome debug to Google's URL`:
 ```javascript
 {
     "name": "Debug Chrome",
