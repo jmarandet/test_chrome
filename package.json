@@ -15,14 +15,16 @@
     ],
     "main": "./out/extension",
     "contributes": {
+        "debuggers": [{
+            "type":"chrome",
+            "variables": {
+                "DebugGoogle": "extension.chrome_debug_to_google"
+            }
+        }],
         "commands": [
             {
                 "command": "extension.sayHello",
                 "title": "Hello World"
-            },
-            {
-                "command": "extension.chrome_debug_to_google",
-                "title": "Set chrome debug to Google's URL"
             },
             {
                 "command": "extension.push_chrome_debug_config",

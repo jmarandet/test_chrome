@@ -24,12 +24,9 @@ export function activate(context: vscode.ExtensionContext) {
 
     context.subscriptions.push(disposable);
  
-
-
-    let debug_Google = vscode.commands.registerCommand('extension.chrome_debug_to_google', () => {
-        debug_google();
+    vscode.commands.registerCommand('extension.chrome_debug_to_google', (config) => { 
+        return debug_google();
     });
-    context.subscriptions.push(debug_Google);
 
     let push_debug_Google = vscode.commands.registerCommand('extension.push_chrome_debug_config', () => {
         push_debug_google_config();
