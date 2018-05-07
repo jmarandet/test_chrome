@@ -1,8 +1,26 @@
 # test-chrome README
 
+
+
 a dummy VSCode Extension to illustrate a kind of bug :
 https://github.com/Microsoft/vscode-chrome-debug/issues/647
 
+# Solution :
+Then open a project and add the following Launch.json setting - or type `F1` and  `Add chrome debug to Google's URL`:
+```javascript
+{
+    "configurations": [
+        {
+            "name": "test google",
+            "type": "chrome",
+            "request": "launch",
+            "url": "${command:DebugGoogle}"
+        }
+    ]
+}
+```
+
+# Initial problem :
 Simply activate the plugin with `F1` and `Hello World`
 
 Then open a project and add the following Launch.json setting - or type `F1` and  `Add chrome debug to Google's URL`:
